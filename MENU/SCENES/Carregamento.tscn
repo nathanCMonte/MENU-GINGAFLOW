@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://b6h0cl8bejvoa"]
 
+[ext_resource type="Script" uid="uid://c0nulcn2aen5p" path="res://MENU/SCENES/carregamento.gd" id="1_pcbsl"]
 [ext_resource type="Texture2D" uid="uid://c3jb1id78t1ua" path="res://MENU/ASSETS/BACKGROUND/image-removebg-preview.png" id="1_yfdcc"]
 
 [sub_resource type="Animation" id="Animation_4vbbf"]
@@ -109,11 +110,79 @@ tracks/2/keys = {
 "values": [Vector2(589, 310), Vector2(589, 295), Vector2(589, 800)]
 }
 
+[sub_resource type="Animation" id="Animation_yfdcc"]
+resource_name = "vinheta_abrir"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("borda2:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.98),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, -122), Vector2(1150, -122)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("GINGA_FLOW:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.98),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(130, 296), Vector2(1300, 296)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("borda1:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-868.99994, -104)]
+}
+
+[sub_resource type="Animation" id="Animation_pcbsl"]
+resource_name = "vinheta_fechar"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("borda2:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1158.0001, -122), Vector2(0, -122)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("GINGA_FLOW:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1291.9999, 296), Vector2(140, 296)]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_wvatm"]
 _data = {
 &"RESET": SubResource("Animation_4vbbf"),
 &"loading": SubResource("Animation_wvatm"),
-&"opening": SubResource("Animation_sct7i")
+&"opening": SubResource("Animation_sct7i"),
+&"vinheta_abrir": SubResource("Animation_yfdcc"),
+&"vinheta_fechar": SubResource("Animation_pcbsl")
 }
 
 [node name="Tela_carregamento" type="Control" unique_id=688995067]
@@ -121,22 +190,22 @@ layout_mode = 3
 anchors_preset = 0
 offset_right = 1153.0
 offset_bottom = 644.0
+script = ExtResource("1_pcbsl")
 
 [node name="borda1" type="ColorRect" parent="." unique_id=1090566431]
 layout_mode = 0
-offset_left = -185.0
+offset_left = -868.99994
 offset_top = -104.0
-offset_right = 538.0414
+offset_right = -145.95856
 offset_bottom = 696.0
 scale = Vector2(1.085, 1.085)
 color = Color(0, 0, 0, 1)
 
 [node name="borda2" type="ColorRect" parent="." unique_id=129896476]
 layout_mode = 0
-offset_left = 565.0
-offset_top = -95.0
-offset_right = 1305.0896
-offset_bottom = 705.0
+offset_top = -122.0
+offset_right = 1282.029
+offset_bottom = 678.0
 scale = Vector2(1.085, 1.085)
 color = Color(0, 0, 0, 1)
 

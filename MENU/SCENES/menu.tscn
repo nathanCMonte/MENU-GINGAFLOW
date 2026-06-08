@@ -1,12 +1,59 @@
 [gd_scene format=3 uid="uid://b4rykwndcjb6x"]
 
-[ext_resource type="Texture2D" uid="uid://bo6m1hsp2xlet" path="res://MENU/ASSETS/BACKGROUND/1.png" id="1_qnims"]
 [ext_resource type="Script" uid="uid://cegywrbpwcejp" path="res://MENU/SCRIPTS/menu.gd" id="1_wpxrk"]
+[ext_resource type="Texture2D" uid="uid://ctasu5yjastjb" path="res://MENU/ASSETS/BACKGROUND/2.png" id="2_re3yn"]
 [ext_resource type="FontFile" uid="uid://1snr8c5uemtr" path="res://MENU/ASSETS/FONTES/Blue Block.otf" id="2_vbyvk"]
 [ext_resource type="Script" uid="uid://bnwctsq3q1v0r" path="res://MENU/SCRIPTS/script_info.gd" id="5_odlpo"]
 [ext_resource type="Texture2D" uid="uid://dq2bsgrtug3du" path="res://MENU/ASSETS/OPTIONS_SYMBOLS/door.png" id="6_re3yn"]
 [ext_resource type="Texture2D" uid="uid://dre3lcrn7gkr7" path="res://MENU/ASSETS/OPTIONS_SYMBOLS/user.png" id="7_4dqpi"]
 [ext_resource type="FontFile" uid="uid://ci74hdmg7pqy1" path="res://MENU/ASSETS/FONTES/SoccerLeague.ttf" id="15_4dn8p"]
+
+[sub_resource type="Animation" id="Animation_05hgj"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-960, -540.00006)]
+}
+
+[sub_resource type="Animation" id="Animation_m10i4"]
+resource_name = "flow"
+length = 0.6
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-960, -540.00006), Vector2(-922, -705)]
+}
+
+[sub_resource type="Animation" id="Animation_h5nug"]
+resource_name = "ginga_anim"
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_m2p23"]
+_data = {
+&"RESET": SubResource("Animation_05hgj"),
+&"flow": SubResource("Animation_m10i4"),
+&"ginga_anim": SubResource("Animation_h5nug")
+}
+
+[sub_resource type="LabelSettings" id="LabelSettings_4dqpi"]
+font = ExtResource("2_vbyvk")
+font_size = 218
+shadow_color = Color(0.10980392, 0, 0, 0)
 
 [sub_resource type="LabelSettings" id="LabelSettings_re3yn"]
 font = ExtResource("2_vbyvk")
@@ -25,7 +72,194 @@ script = ExtResource("1_wpxrk")
 texture_filter = 2
 position = Vector2(576, 324)
 scale = Vector2(0.6, 0.59999996)
-texture = ExtResource("1_qnims")
+texture = ExtResource("2_re3yn")
+
+[node name="ginga_flow_anim" type="Control" parent="1" unique_id=1548034675]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -960.0
+offset_top = -540.00006
+offset_right = -920.0
+offset_bottom = -500.00006
+
+[node name="ginflow_txt_Anim" type="AnimationPlayer" parent="1/ginga_flow_anim" unique_id=505194127]
+libraries/ = SubResource("AnimationLibrary_m2p23")
+
+[node name="Ginga_no_fluxo7" type="Label" parent="1/ginga_flow_anim" unique_id=1971380454]
+self_modulate = Color(18.892157, 18.892157, 18.892157, 0.13725491)
+layout_mode = 0
+offset_left = -61.0
+offset_top = -30.0
+offset_right = 937.0
+offset_bottom = 199.0
+rotation = 0.16329032
+text = "GINGA FLOW"
+label_settings = SubResource("LabelSettings_4dqpi")
+
+[node name="Ginga_no_fluxo2" type="Label" parent="1/ginga_flow_anim" unique_id=1470416882]
+self_modulate = Color(18.892157, 18.892157, 18.892157, 0.13725491)
+layout_mode = 0
+offset_left = -289.333
+offset_top = 960.0
+offset_right = 708.667
+offset_bottom = 1189.0
+rotation = 0.16329032
+text = "GINGA FLOW"
+label_settings = SubResource("LabelSettings_4dqpi")
+
+[node name="Ginga_no_fluxo3" type="Label" parent="1/ginga_flow_anim" unique_id=1147259513]
+self_modulate = Color(18.892157, 18.892157, 18.892157, 0.13725491)
+layout_mode = 0
+offset_left = -23.0
+offset_top = -195.0
+offset_right = 975.0
+offset_bottom = 34.0
+rotation = 0.16329032
+text = "GINGA FLOW"
+label_settings = SubResource("LabelSettings_4dqpi")
+
+[node name="Label3" type="Label" parent="1/ginga_flow_anim" unique_id=1542681337]
+self_modulate = Color(18.892157, 18.892157, 18.892157, 0.13725491)
+layout_mode = 0
+offset_left = -99.0
+offset_top = 135.0
+offset_right = 899.0
+offset_bottom = 364.0
+rotation = 0.16329032
+text = "GINGA FLOW"
+label_settings = SubResource("LabelSettings_4dqpi")
+
+[node name="Label4" type="Label" parent="1/ginga_flow_anim" unique_id=735083416]
+self_modulate = Color(18.892157, 18.892157, 18.892157, 0.13725491)
+layout_mode = 0
+offset_left = -137.33301
+offset_top = 300.00003
+offset_right = 860.667
+offset_bottom = 529.0
+rotation = 0.16329032
+text = "GINGA FLOW"
+label_settings = SubResource("LabelSettings_4dqpi")
+
+[node name="Label5" type="Label" parent="1/ginga_flow_anim" unique_id=158555418]
+self_modulate = Color(18.892157, 18.892157, 18.892157, 0.13725491)
+layout_mode = 0
+offset_left = -175.0
+offset_top = 465.0
+offset_right = 823.0
+offset_bottom = 694.0
+rotation = 0.16329032
+text = "GINGA FLOW"
+label_settings = SubResource("LabelSettings_4dqpi")
+
+[node name="Label6" type="Label" parent="1/ginga_flow_anim" unique_id=970886297]
+self_modulate = Color(18.892157, 18.892157, 18.892157, 0.13725491)
+layout_mode = 0
+offset_left = -213.333
+offset_top = 630.0
+offset_right = 784.667
+offset_bottom = 859.0
+rotation = 0.16329032
+text = "GINGA FLOW"
+label_settings = SubResource("LabelSettings_4dqpi")
+
+[node name="Ginga_no_fluxo4" type="Label" parent="1/ginga_flow_anim" unique_id=586770651]
+self_modulate = Color(18.892157, 18.892157, 18.892157, 0.13725491)
+layout_mode = 0
+offset_left = -593.0
+offset_top = 2280.334
+offset_right = 405.0
+offset_bottom = 2509.3342
+rotation = 0.16406095
+text = "GINGA FLOW"
+label_settings = SubResource("LabelSettings_4dqpi")
+
+[node name="Ginga_no_fluxo5" type="Label" parent="1/ginga_flow_anim" unique_id=2081369638]
+self_modulate = Color(18.892157, 18.892157, 18.892157, 0.13725491)
+layout_mode = 0
+offset_left = -327.0
+offset_top = 1125.0
+offset_right = 671.0001
+offset_bottom = 1354.0
+rotation = 0.16406095
+text = "GINGA FLOW"
+label_settings = SubResource("LabelSettings_4dqpi")
+
+[node name="Ginga_no_fluxo6" type="Label" parent="1/ginga_flow_anim" unique_id=1043920683]
+self_modulate = Color(18.892157, 18.892157, 18.892157, 0.13725491)
+layout_mode = 0
+offset_left = -365.0
+offset_top = 1290.334
+offset_right = 633.0
+offset_bottom = 1519.334
+rotation = 0.16406095
+text = "GINGA FLOW"
+label_settings = SubResource("LabelSettings_4dqpi")
+
+[node name="Label7" type="Label" parent="1/ginga_flow_anim" unique_id=1996342077]
+self_modulate = Color(18.892157, 18.892157, 18.892157, 0.13725491)
+layout_mode = 0
+offset_left = -403.333
+offset_top = 1455.334
+offset_right = 594.667
+offset_bottom = 1684.334
+rotation = 0.16406095
+text = "GINGA FLOW"
+label_settings = SubResource("LabelSettings_4dqpi")
+
+[node name="Label8" type="Label" parent="1/ginga_flow_anim" unique_id=1570118122]
+self_modulate = Color(18.892157, 18.892157, 18.892157, 0.13725491)
+layout_mode = 0
+offset_left = -441.0
+offset_top = 1620.334
+offset_right = 557.0
+offset_bottom = 1849.334
+rotation = 0.16406095
+text = "GINGA FLOW"
+label_settings = SubResource("LabelSettings_4dqpi")
+
+[node name="Label9" type="Label" parent="1/ginga_flow_anim" unique_id=305825570]
+self_modulate = Color(18.892157, 18.892157, 18.892157, 0.13725491)
+layout_mode = 0
+offset_left = -479.333
+offset_top = 1785.667
+offset_right = 518.667
+offset_bottom = 2014.6669
+rotation = 0.16406095
+text = "GINGA FLOW"
+label_settings = SubResource("LabelSettings_4dqpi")
+
+[node name="Label10" type="Label" parent="1/ginga_flow_anim" unique_id=1422704752]
+self_modulate = Color(18.892157, 18.892157, 18.892157, 0.13725491)
+layout_mode = 0
+offset_left = -517.0
+offset_top = 1950.667
+offset_right = 481.0
+offset_bottom = 2179.667
+rotation = 0.16406095
+text = "GINGA FLOW"
+label_settings = SubResource("LabelSettings_4dqpi")
+
+[node name="Label11" type="Label" parent="1/ginga_flow_anim" unique_id=278111525]
+self_modulate = Color(18.892157, 18.892157, 18.892157, 0.13725491)
+layout_mode = 0
+offset_left = -555.0
+offset_top = 2115.0
+offset_right = 443.0
+offset_bottom = 2344.0
+rotation = 0.16406095
+text = "GINGA FLOW"
+label_settings = SubResource("LabelSettings_4dqpi")
+
+[node name="Label2" type="Label" parent="1/ginga_flow_anim" unique_id=1144051990]
+self_modulate = Color(18.892157, 18.892157, 18.892157, 0.13725491)
+layout_mode = 0
+offset_left = -251.667
+offset_top = 795.0
+offset_right = 746.333
+offset_bottom = 1024.0
+rotation = 0.16329032
+text = "GINGA FLOW"
+label_settings = SubResource("LabelSettings_4dqpi")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=522541928]
 layout_mode = 0
@@ -171,6 +405,8 @@ theme_override_fonts/font = ExtResource("2_vbyvk")
 theme_override_font_sizes/font_size = 24
 text = "Now playing -"
 label_settings = SubResource("LabelSettings_re3yn")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=429363672]
 
 [connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="VBoxContainer/Button2" to="." method="_on_button_2_pressed"]
