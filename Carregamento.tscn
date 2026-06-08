@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://b6h0cl8bejvoa"]
 
-[ext_resource type="Texture2D" uid="uid://b2iwbeo3fnau2" path="res://icon.svg" id="1_4vbbf"]
+[ext_resource type="Texture2D" uid="uid://c3jb1id78t1ua" path="res://MENU/ASSETS/BACKGROUND/image-removebg-preview.png" id="1_4vbbf"]
 
 [sub_resource type="Animation" id="Animation_4vbbf"]
 length = 0.001
@@ -14,7 +14,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(1335, -95)]
+"values": [Vector2(565, -95)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -26,12 +26,12 @@ tracks/1/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(-922.99994, -104)]
+"values": [Vector2(-185, -104)]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("godot:rotation")
+tracks/2/path = NodePath("GINGA_FLOW:rotation")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
@@ -40,15 +40,26 @@ tracks/2/keys = {
 "update": 0,
 "values": [0.0]
 }
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("GINGA_FLOW:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(589, 310)]
+}
 
 [sub_resource type="Animation" id="Animation_wvatm"]
 resource_name = "loading"
 length = 2.3333333
-loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("godot:rotation")
+tracks/0/path = NodePath("GINGA_FLOW:rotation")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -60,6 +71,7 @@ tracks/0/keys = {
 
 [sub_resource type="Animation" id="Animation_sct7i"]
 resource_name = "opening"
+length = 1.8
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -84,6 +96,18 @@ tracks/1/keys = {
 "update": 0,
 "values": [Vector2(594.00006, -111), Vector2(1335, -95)]
 }
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("GINGA_FLOW:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(1, 1.3333334, 1.7333333),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(589, 310), Vector2(589, 295), Vector2(589, 800)]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_wvatm"]
 _data = {
@@ -100,30 +124,26 @@ offset_bottom = 644.0
 
 [node name="borda1" type="ColorRect" parent="." unique_id=1090566431]
 layout_mode = 0
-offset_left = -195.0
-offset_top = -117.0
-offset_right = 528.0414
-offset_bottom = 683.0
+offset_left = -185.0
+offset_top = -104.0
+offset_right = 538.0414
+offset_bottom = 696.0
 scale = Vector2(1.085, 1.085)
 color = Color(0, 0, 0, 1)
 
 [node name="borda2" type="ColorRect" parent="." unique_id=129896476]
 layout_mode = 0
-offset_left = 594.00006
-offset_top = -111.0
-offset_right = 1334.0913
-offset_bottom = 689.0
+offset_left = 565.0
+offset_top = -95.0
+offset_right = 1305.0896
+offset_bottom = 705.0
 scale = Vector2(1.085, 1.085)
 color = Color(0, 0, 0, 1)
 
-[node name="godot" type="Sprite2D" parent="." unique_id=676985813]
-position = Vector2(589, 330)
-scale = Vector2(1.3, 1.3)
+[node name="GINGA_FLOW" type="Sprite2D" parent="." unique_id=676985813]
+position = Vector2(589, 310)
+scale = Vector2(0.7, 0.7)
 texture = ExtResource("1_4vbbf")
-
-[node name="Camera2D" type="Camera2D" parent="." unique_id=465466896]
-position = Vector2(593, 326)
-zoom = Vector2(0.8, 0.8)
 
 [node name="loading_Anims" type="AnimationPlayer" parent="." unique_id=307479016]
 libraries/ = SubResource("AnimationLibrary_wvatm")
