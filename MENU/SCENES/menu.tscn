@@ -89,7 +89,7 @@ offset_right = 160.00006
 offset_bottom = 32.0
 theme_override_fonts/font = ExtResource("2_vbyvk")
 theme_override_font_sizes/font_size = 24
-text = "EgoistMan"
+text = "Egoist Player"
 
 [node name="Label2" type="Label" parent="Panel/SCRIPT_INFO" unique_id=1099711833]
 offset_left = 72.00009

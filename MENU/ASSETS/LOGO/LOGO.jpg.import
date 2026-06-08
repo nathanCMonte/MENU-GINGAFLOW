@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dhckxiifj238f"
-path="res://.godot/imported/Ginga_logo-removebg-preview (3).png-32e02a293cd9a0a32fc774d1c095d353.ctex"
+uid="uid://v2vsuv5ohthi"
+path="res://.godot/imported/LOGO.jpg-56277d8211d57f2138059d9e93695ce0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://MENU/ASSETS/Ginga_logo-removebg-preview (3).png"
-dest_files=["res://.godot/imported/Ginga_logo-removebg-preview (3).png-32e02a293cd9a0a32fc774d1c095d353.ctex"]
+source_file="res://MENU/ASSETS/LOGO/LOGO.jpg"
+dest_files=["res://.godot/imported/LOGO.jpg-56277d8211d57f2138059d9e93695ce0.ctex"]
 
 [params]
 

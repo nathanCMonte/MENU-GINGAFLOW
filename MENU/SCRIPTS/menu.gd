@@ -1,7 +1,7 @@
 extends Control
 @onready var music_text = $Now_playing/music_label
 @onready var musica_atual = get_node("/root/AudioManager")
-var loading_screen = preload("res://Carregamento.tscn")
+var loading_screen = preload("res://MENU/SCENES/Carregamento.tscn")
 var hue:= 0.0
 func _ready() -> void:
 	await loading()

@@ -1,11 +1,10 @@
 [gd_scene format=3 uid="uid://oajyla8wwvqo"]
 
-[ext_resource type="AudioStream" uid="uid://cjqax0hdokaww" path="res://MENU/ASSETS/SONGS/YTDown_YouTube_L-Etoile-D-Afrique-x-Les-Trompettes-D-Af_Media_DGEu1SwsY4E_009_128k.mp3" id="1_yave1"]
 [ext_resource type="Script" uid="uid://7uh8sn1jjj7r" path="res://MENU/SCENES/audio_manager.gd" id="2_aqpd6"]
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" unique_id=818651929]
-stream = ExtResource("1_yave1")
-volume_db = -6.0
-pitch_scale = 0.8
-parameters/looping = true
+volume_db = -5.0
+pitch_scale = 0.9
 script = ExtResource("2_aqpd6")
+
+[connection signal="finished" from="." to="." method="_on_finished"]
