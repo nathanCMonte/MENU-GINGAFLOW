@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://b6h0cl8bejvoa"]
 
-[ext_resource type="Script" uid="uid://c0nulcn2aen5p" path="res://MENU/SCENES/carregamento.gd" id="1_pcbsl"]
+[ext_resource type="Script" uid="uid://c0nulcn2aen5p" path="res://MENU/SCRIPTS/carregamento.gd" id="1_pcbsl"]
 [ext_resource type="Texture2D" uid="uid://c3jb1id78t1ua" path="res://MENU/ASSETS/BACKGROUND/image-removebg-preview.png" id="1_yfdcc"]
 
 [sub_resource type="Animation" id="Animation_4vbbf"]

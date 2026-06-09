@@ -25,8 +25,8 @@ func tocar_musica_aleatoria():
 		nome = "BOUNCE FUNK - From SAPFIR"
 	elif stream == musicas[2]:
 		last_music = musicas[2]
-		volume_db = 1
-		nome = "PUCH - From UdieNnx"
+		volume_db = 5
+		nome = "PUCH Instrumental Version - From UdieNnx"
 	else:
 		nome = "Unknown"
 

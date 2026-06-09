@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://biplwcsl7nnfx"]
 
 [ext_resource type="Texture2D" uid="uid://plg5do7ag5mb" path="res://MENU/ASSETS/BACKGROUND/3.png" id="1_hv0ss"]
+[ext_resource type="Script" uid="uid://ov6yr7rwh1tw" path="res://MENU/SCRIPTS/login.gd" id="1_jml5k"]
 [ext_resource type="FontFile" uid="uid://1snr8c5uemtr" path="res://MENU/ASSETS/FONTES/Blue Block.otf" id="2_hu1il"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hv0ss"]
@@ -25,6 +26,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_jml5k")
 
 [node name="3" type="Sprite2D" parent="." unique_id=1588392159]
 position = Vector2(576, 324)
@@ -60,3 +62,16 @@ theme_override_colors/font_color = Color(1, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_hu1il")
 theme_override_font_sizes/font_size = 64
 text = "COMING SOON"
+
+[node name="Button" type="Button" parent="." unique_id=1940352174]
+layout_mode = 0
+offset_left = 56.0
+offset_top = 560.0
+offset_right = 145.0
+offset_bottom = 600.0
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_hu1il")
+theme_override_font_sizes/font_size = 32
+text = "RETURN"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
