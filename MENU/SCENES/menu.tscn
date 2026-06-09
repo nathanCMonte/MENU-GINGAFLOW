@@ -55,6 +55,10 @@ font = ExtResource("2_vbyvk")
 font_size = 218
 shadow_color = Color(0.10980392, 0, 0, 0)
 
+[sub_resource type="LabelSettings" id="LabelSettings_05hgj"]
+font = ExtResource("2_vbyvk")
+font_size = 24
+
 [sub_resource type="LabelSettings" id="LabelSettings_re3yn"]
 font = ExtResource("2_vbyvk")
 font_size = 20
@@ -315,15 +319,13 @@ scale = Vector2(1.4, 1.4)
 [node name="SCRIPT_INFO" type="Node2D" parent="Panel" unique_id=1872931791]
 script = ExtResource("5_odlpo")
 
-[node name="Label" type="Label" parent="Panel/SCRIPT_INFO" unique_id=1030748967]
-texture_filter = 1
-offset_left = 72.00006
-offset_top = 8.000001
-offset_right = 160.00006
-offset_bottom = 32.0
-theme_override_fonts/font = ExtResource("2_vbyvk")
-theme_override_font_sizes/font_size = 24
+[node name="Label" type="Label" parent="Panel/SCRIPT_INFO" unique_id=977090057]
+offset_left = 68.57143
+offset_top = 5.7142854
+offset_right = 206.57143
+offset_bottom = 33.714287
 text = "Egoist Player"
+label_settings = SubResource("LabelSettings_05hgj")
 
 [node name="Label2" type="Label" parent="Panel/SCRIPT_INFO" unique_id=1099711833]
 offset_left = 72.00009
